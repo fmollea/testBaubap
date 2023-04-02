@@ -11,12 +11,21 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_loginFragment_to_messageLoginDialogFragment2"
-            app:destination="@id/messageLoginDialogFragment2" />
+            android:id="@+id/action_loginFragment_to_messageLoginDialogFragment"
+            app:destination="@id/messageLoginDialogFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
-    <fragment
-        android:id="@+id/messageLoginDialogFragment2"
+    <dialog
+        android:id="@+id/messageLoginDialogFragment"
         android:name="com.fmollea.login.ui.MessageLoginDialogFragment"
         android:label="fragment_message_login_dialog"
-        tools:layout="@layout/fragment_message_login_dialog" />
+        tools:layout="@layout/fragment_message_login_dialog" >
+        <argument
+            android:name="message"
+            app:argType="string"
+            android:defaultValue="" />
+    </dialog>
 </navigation>
