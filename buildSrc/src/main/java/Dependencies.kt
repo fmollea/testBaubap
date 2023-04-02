@@ -48,7 +48,7 @@ object Navigation {
 }
 
 object ViewModel {
-    const val viewModel = "androidx.activity:activity-ktx:${Versions.viewModel}"
+    const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.viewModel}"
     const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.viewModel}"
 }
 
