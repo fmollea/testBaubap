@@ -1,0 +1,17 @@
+package com.fmollea.login.di
+
+import com.fmollea.domain.usecases.login.LoginUseCaseImpl
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.android.components.ViewModelComponent
+import dagger.hilt.android.scopes.ViewModelScoped
+
+@Module
+@InstallIn(ViewModelComponent::class)
+internal object ViewModelModule {
+
+    @Provides
+    @ViewModelScoped
+    fun provideLoginUseCases() = LoginUseCaseImpl()
+}

@@ -1,0 +1,9 @@
+<resources>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="empty_or_null_fields">The email and password fields are required.</string>
+    <string name="invalid_email">The enter email is invalid.</string>
+    <string name="success">Login successfully</string>
+    <string name="error">An error occurred</string>
+</resources>
