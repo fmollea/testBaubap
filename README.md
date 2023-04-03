@@ -41,7 +41,7 @@ fun areFieldsEmptyOrNulls(email: String?, password: String?): Boolean
 
 ### Screenshots and video 
 
-<img width="400"  heigth="889" alt="image" src="https://user-images.githubusercontent.com/7406241/229527351-6a393eab-b870-4aa8-acf3-5fa00e433ad4.png"> 
-<img width="400"  heigth="889" alt="image" src="https://user-images.githubusercontent.com/7406241/229527431-a84be5c1-7d87-4a08-89e5-01d492c9c930.png">
+<img width="280"  heigth="622" alt="image" src="https://user-images.githubusercontent.com/7406241/229527351-6a393eab-b870-4aa8-acf3-5fa00e433ad4.png"> 
+<img width="280"  heigth="622" alt="image" src="https://user-images.githubusercontent.com/7406241/229527431-a84be5c1-7d87-4a08-89e5-01d492c9c930.png">
 </br>
 <video src="https://user-images.githubusercontent.com/7406241/229535938-bac64c6e-3a8b-446e-aa1e-e50e6f7495b2.webm" width="400" height="889">
