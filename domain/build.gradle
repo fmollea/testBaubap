@@ -42,5 +42,6 @@ dependencies {
     kapt Hilt.hiltCompiler
 
     testImplementation TestImplementation.junit
+    testImplementation TestImplementation.mockitoCore
     androidTestImplementation AndroidTestImplementation.junit
 }

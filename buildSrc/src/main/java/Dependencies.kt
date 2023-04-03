@@ -7,20 +7,16 @@ object Versions {
     const val testImplJunit = "4.13.2"
     const val androidTestImplJunit = "1.1.5"
     const val androidTestEspresso = "3.5.1"
-
-    const val kotlinCoroutines = "1.6.1"
-
-    const val coroutineLifecycleScope = "2.5.1"
+    const val coreTesting = "2.2.0"
+    const val truth = "1.1.3"
+    const val mockito = "5.2.0"
 
     const val viewModel = "2.6.1"
 
     const val hilt = "2.44"
     const val hiltCompiler = "1.0.0"
 
-
     const val navigation = "2.5.3"
-
-    const val swipeRefresh = "1.1.0"
 }
 
 object Deps {
@@ -33,6 +29,9 @@ object Deps {
 
 object TestImplementation {
     const val junit = "junit:junit:${Versions.testImplJunit}"
+    const val coreTesting = "androidx.arch.core:core-testing:${Versions.coreTesting}"
+    const val mockitoCore = "org.mockito:mockito-core:${Versions.mockito}"
+    const val truth = "com.google.truth:truth:${Versions.truth}"
 }
 
 object AndroidTestImplementation {
@@ -56,9 +55,4 @@ object Hilt {
     const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
     const val hiltAndroidCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
     const val hiltCompiler = "androidx.hilt:hilt-compiler:${Versions.hiltCompiler}"
-}
-
-object CircularProgressBar {
-    const val swipeRefresh =
-        "androidx.swiperefreshlayout:swiperefreshlayout:${Versions.swipeRefresh}"
 }

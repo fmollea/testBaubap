@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.fmollea.login.R
 import com.fmollea.login.databinding.FragmentLoginBinding
@@ -19,15 +20,15 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentLoginBinding.bind(view)
-
+        observeViewModel()
         binding.btLogin.setOnClickListener {
-            observeViewModel()
+            loginViewModel.loginUser(binding.txtEmail.text.toString(),
+                binding.txtPassword.text.toString())
         }
     }
 
     private fun observeViewModel() {
-        loginViewModel.loginUser(binding.txtEmail.editText?.text.toString(),
-            binding.txtPassword.editText?.text.toString()).observe(viewLifecycleOwner) { result ->
+        val loginObserver = Observer<LoginViewModel.LoginViewState> {result ->
             when(result) {
                 is LoginViewModel.LoginViewState.EmptyOrNullFields -> {
                     navToLoginDialog(getString(R.string.empty_or_null_fields))
@@ -43,6 +44,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                 }
             }
         }
+        loginViewModel.loginStatus.observe(viewLifecycleOwner, loginObserver)
     }
 
     private fun navToLoginDialog(message: String) {
